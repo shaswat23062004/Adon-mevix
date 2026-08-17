@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Portfolio — ADON Mevix{% endblock %}
+{% block body_class %}page-portfolio{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="section-inner">
+    <p class="eyebrow">Our Work</p>
+    <h1>Brands we've helped <span class="gold-text">grow</span></h1>
+    <p class="page-hero-sub">A selection of projects across branding, social media, web development and complete digital transformations.</p>
+  </div>
+</section>
+
+<section class="portfolio-full">
+  <div class="section-inner">
+
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All Work</button>
+      <button class="filter-btn" data-filter="Branding">Branding</button>
+      <button class="filter-btn" data-filter="Social Media">Social Media</button>
+      <button class="filter-btn" data-filter="Website">Website</button>
+      <button class="filter-btn" data-filter="Video">Video</button>
+      <button class="filter-btn" data-filter="Ads">Ads</button>
+    </div>
+
+    <div class="portfolio-grid" id="portfolioGrid">
+      {% for p in portfolio %}
+      <div class="port-card-full animate-on-scroll" style="--accent:{{ p.color }}; --i:{{ loop.index0 }}" data-tags="{{ p.tags | join(',') }}">
+        <div class="pcf-header" style="background: linear-gradient(135deg, {{ p.color }}22, {{ p.color }}08);">
+          <span class="port-category">{{ p.category }}</span>
+          <h3>{{ p.title }}</h3>
+        </div>
+        <div class="pcf-body">
+          <p>{{ p.desc }}</p>
+          <div class="port-stats-row">
+            {% for s in p.stats %}
+            <div class="port-stat">
+              <span class="port-stat-val" data-count="{{ s.value }}">{{ s.value }}</span>
+              <span class="port-stat-label">{{ s.label }}</span>
+            </div>
+            {% endfor %}
+          </div>
+          <div class="port-tags">
+            {% for t in p.tags %}
+            <span class="port-tag">{{ t }}</span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="section-inner cta-inner">
+    <h2>Want results like these <span class="gold-text">for your brand?</span></h2>
+    <p>Tell us about your project and we'll put together a tailored plan.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-gold btn-lg">
+      Start your project
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+{% endblock %}

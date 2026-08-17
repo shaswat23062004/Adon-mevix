@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Contact — ADON Mevix{% endblock %}
+{% block body_class %}page-contact{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="section-inner">
+    <p class="eyebrow">Let's Grow Together</p>
+    <h1>Get in touch <span class="gold-text">today</span></h1>
+    <p class="page-hero-sub">Tell us about your brand and we'll get back to you within 24 hours — limited onboarding slots this month.</p>
+  </div>
+</section>
+
+<section class="contact-section">
+  <div class="section-inner contact-grid">
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name">
+        <span class="field-error" id="err-name"></span>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@business.com" autocomplete="email">
+          <span class="field-error" id="err-email"></span>
+        </div>
+        <div>
+          <label for="phone">Phone <span class="optional">(optional)</span></label>
+          <input type="tel" id="phone" name="phone" placeholder="+91 00000 00000" autocomplete="tel">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="plan">Interested in</label>
+        <select id="plan" name="plan">
+          <option value="Not specified">Just exploring</option>
+          <option value="Basic">Basic — ₹9,999/month</option>
+          <option value="Standard">Standard — ₹19,999/month</option>
+          <option value="Premium">Premium — ₹34,999/month</option>
+          <option value="Starter Website">Starter Website — ₹6,000</option>
+          <option value="Business Website">Business Website — ₹12,000</option>
+          <option value="Premium Website">Premium Website — ₹20,000</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Tell us about your brand and what you're looking for..."></textarea>
+        <span class="field-error" id="err-message"></span>
+      </div>
+
+      <button type="submit" class="btn btn-gold btn-lg" id="submitBtn">
+        <span class="btn-label">Send message</span>
+        <span class="btn-spinner" aria-hidden="true"></span>
+      </button>
+
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+
+    <aside class="contact-side">
+      <div class="contact-card">
+        <h3>Reach us directly</h3>
+        <a class="contact-line" href="mailto:{{ contact.email }}">
+          <span class="contact-icon"><svg viewBox="0 0 24 24" width="18" height="18"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 6.5l9 6.5 9-6.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></span>
+          {{ contact.email }}
+        </a>
+      </div>
+
+      <div class="slots-banner">
+        <span class="dot-live"></span>
+        Limited onboarding slots this month
+      </div>
+    </aside>
+
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+{% endblock %}

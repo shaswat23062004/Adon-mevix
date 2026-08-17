@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block title %}About — ADON Mevix{% endblock %}
+{% block body_class %}page-about{% endblock %}
+
+{% block content %}
+<section class="page-hero">
+  <div class="section-inner">
+    <p class="eyebrow">Our Story</p>
+    <h1>Built to grow <span class="gold-text">brands that matter</span></h1>
+    <p class="page-hero-sub">ADON Mevix was founded on a simple belief — that every business, regardless of size, deserves world-class creative and digital strategy.</p>
+  </div>
+</section>
+
+<section class="about-mission">
+  <div class="section-inner about-mission-grid">
+    <div class="mission-copy">
+      <p class="eyebrow">Who We Are</p>
+      <h2 class="section-title">Where <span class="gold-text">creativity</span> meets strategy</h2>
+      <p>We are a full-service digital agency combining creative design, data-driven marketing and technical development into one cohesive growth engine for your brand.</p>
+      <p>From startups launching their first social media presence to established businesses scaling their digital operations — we've built solutions that perform. Every brief we take on is approached with the same obsession: outcomes over aesthetics, results over vanity metrics.</p>
+      <div class="mission-stats">
+        <div class="mstat"><span class="mstat-num" data-count="20+">0</span><span class="mstat-label">Brands grown</span></div>
+        <div class="mstat"><span class="mstat-num" data-count="1+">0</span><span class="mstat-label">Years of experience</span></div>
+        <div class="mstat"><span class="mstat-num" data-count="98">0</span><span class="mstat-label">% client satisfaction</span></div>
+      </div>
+    </div>
+    <div class="mission-visual">
+      <div class="mission-card mc1">
+        <div class="mc-icon">
+          <svg viewBox="0 0 48 48" width="28" height="28"><path d="M8 34l8-12 8 8 8-16 8 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Results-first thinking</h4>
+        <p>Every decision is tied to a measurable outcome.</p>
+      </div>
+      <div class="mission-card mc2">
+        <div class="mc-icon">
+          <svg viewBox="0 0 48 48" width="28" height="28"><circle cx="24" cy="20" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 40c0-8 6-13 14-13s14 5 14 13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </div>
+        <h4>People-centred design</h4>
+        <p>We design for your audience, not for awards.</p>
+      </div>
+      <div class="mission-card mc3">
+        <div class="mc-icon">
+          <svg viewBox="0 0 48 48" width="28" height="28"><path d="M24 6l4.5 9 10 1.5-7.2 7 1.7 10L24 29l-9 4.5 1.7-10L9.5 16.5l10-1.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <h4>Craft at every level</h4>
+        <p>Quality isn't a deliverable — it's our minimum standard.</p>
+      </div>
+      <div class="mission-card mc4">
+        <div class="mc-icon">
+          <svg viewBox="0 0 48 48" width="28" height="28"><rect x="8" y="8" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="26" y="8" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="8" y="26" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><rect x="26" y="26" width="14" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <h4>Integrated approach</h4>
+        <p>Design, content, tech — one team, one vision.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about-values">
+  <div class="section-inner">
+    <p class="eyebrow center">What Drives Us</p>
+    <h2 class="section-title center">Our <span class="gold-text">core values</span></h2>
+    <div class="values-grid">
+      <div class="value-card animate-on-scroll" style="--i:0">
+        <span class="value-num">01</span>
+        <h3>Transparency</h3>
+        <p>No jargon, no hidden fees, no surprises. You always know what we're doing, why we're doing it and how it's performing.</p>
+      </div>
+      <div class="value-card animate-on-scroll" style="--i:1">
+        <span class="value-num">02</span>
+        <h3>Ownership</h3>
+        <p>We treat your brand like it's our own. When you win, we win. That alignment drives every decision we make on your behalf.</p>
+      </div>
+      <div class="value-card animate-on-scroll" style="--i:2">
+        <span class="value-num">03</span>
+        <h3>Curiosity</h3>
+        <p>Digital moves fast. We stay ahead of platforms, trends and tools so your brand is always positioned at the frontier.</p>
+      </div>
+      <div class="value-card animate-on-scroll" style="--i:3">
+        <span class="value-num">04</span>
+        <h3>Excellence</h3>
+        <p>Good enough is never enough. We push every project until it's genuinely exceptional — then we find one more thing to improve.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="about-team">
+  <div class="section-inner">
+    <p class="eyebrow center">The People Behind the Work</p>
+    <h2 class="section-title center">Meet the <span class="gold-text">team</span></h2>
+    <div class="team-grid">
+      {% for member in team %}
+      <div class="team-card animate-on-scroll" style="--i:{{ loop.index0 }}">
+        <div class="team-avatar">{{ member.initial }}</div>
+        <h3>{{ member.name }}</h3>
+        <span class="team-role">{{ member.role }}</span>
+        <p>{{ member.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section> -->
+
+<section class="why-choose alt">
+  <div class="section-inner">
+    <p class="eyebrow center">Why Businesses Pick Us</p>
+    <h2 class="section-title center">Why choose <span class="gold-text">ADON Mevix</span>?</h2>
+    <div class="why-grid">
+      {% for item in why_choose %}
+      <div class="why-card" style="--i:{{ loop.index0 }}">
+        <div class="why-icon">
+          {% if item.icon == 'team' %}
+          <svg viewBox="0 0 48 48" width="28" height="28"><circle cx="18" cy="16" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M6 38c0-7 5.4-11 12-11s12 4 12 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          {% elif item.icon == 'quality' %}
+          <svg viewBox="0 0 48 48" width="28" height="28"><circle cx="24" cy="18" r="10" fill="none" stroke="currentColor" stroke-width="2"/><path d="M18 27l-4 13 10-5 10 5-4-13" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          {% elif item.icon == 'clock' %}
+          <svg viewBox="0 0 48 48" width="28" height="28"><circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/><path d="M24 14v10l7 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          {% else %}
+          <svg viewBox="0 0 48 48" width="28" height="28"><path d="M8 34l8-12 8 8 8-16 8 10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          {% endif %}
+        </div>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="section-inner cta-inner">
+    <h2>Ready to work with us?</h2>
+    <p>Let's talk about what ADON Mevix can do for your brand.</p>
+    <a href="{{ url_for('contact') }}" class="btn btn-gold btn-lg">
+      Start the conversation
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="{{ url_for('static', filename='js/about.js') }}"></script>
+{% endblock %}

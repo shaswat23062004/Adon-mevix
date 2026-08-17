@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Page Not Found — ADON Mevix{% endblock %}
+{% block content %}
+<section class="page-hero" style="min-height:60vh; display:flex; align-items:center;">
+  <div class="section-inner" style="text-align:center;">
+    <p class="eyebrow">404</p>
+    <h1>Page <span class="gold-text">not found</span></h1>
+    <p class="page-hero-sub" style="margin: 0 auto 2rem;">Looks like this page took off without us. Let's get you back on track.</p>
+    <a href="{{ url_for('home') }}" class="btn btn-gold btn-lg">Back to home</a>
+  </div>
+</section>
+{% endblock %}

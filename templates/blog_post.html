@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }} — ADON Mevix Blog{% endblock %}
+{% block body_class %}page-blog-post{% endblock %}
+
+{% block content %}
+<section class="post-hero">
+  <div class="section-inner">
+    <a href="{{ url_for('blog') }}" class="back-link">
+      <svg viewBox="0 0 24 24" width="16" height="16"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Back to Blog
+    </a>
+    <div class="post-meta-top">
+      <span class="blog-cat">{{ post.category }}</span>
+      <span class="meta-dot">·</span>
+      <span>{{ post.date }}</span>
+      <span class="meta-dot">·</span>
+      <span>{{ post.read_time }}</span>
+    </div>
+    <h1>{{ post.title }}</h1>
+    <p class="post-excerpt">{{ post.excerpt }}</p>
+  </div>
+</section>
+
+<section class="post-body-section">
+  <div class="section-inner post-layout">
+    <article class="post-article">
+      {% for heading, body in post.body %}
+      <div class="post-block">
+        <h2>{{ heading }}</h2>
+        <p>{{ body }}</p>
+      </div>
+      {% endfor %}
+
+      <div class="post-footer">
+        <p>Written by the <strong>ADON Mevix</strong> team.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-gold">Work with us</a>
+      </div>
+    </article>
+
+    <aside class="post-sidebar">
+      <div class="sidebar-card">
+        <h4>More from the blog</h4>
+        {% for other in others %}
+        <a href="{{ url_for('blog_post', slug=other.slug) }}" class="sidebar-post">
+          <span class="blog-cat small">{{ other.category }}</span>
+          <p>{{ other.title }}</p>
+          <span class="read-more small">Read →</span>
+        </a>
+        {% endfor %}
+      </div>
+
+      <div class="sidebar-cta">
+        <h4>Want results like this?</h4>
+        <p>Let ADON Mevix build a strategy around your specific goals.</p>
+        <a href="{{ url_for('contact') }}" class="btn btn-gold btn-lg" style="width:100%; justify-content:center;">
+          Get in touch
+        </a>
+      </div>
+    </aside>
+  </div>
+</section>
+{% endblock %}
