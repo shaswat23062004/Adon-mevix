@@ -367,5 +367,5 @@ def api_contact():
 
 
 if __name__ == "__main__":
-    app.run()
-    # app.run(debug=True, host="0.0.0.0", port=5000)
+    port = int(os.getenv("PORT", 5000))
+    app.run(debug=False, host="0.0.0.0", port=port)
